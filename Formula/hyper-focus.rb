@@ -8,13 +8,14 @@ class HyperFocus < Formula
   depends_on :macos
 
   service do
-    run [opt_bin/"hyper-focus"]
+    # pass configuration in case you run this as root
+    run [opt_bin/"hyper-focus", "--configuration", "#{Dir.home}/.config/focus/config.json"]
     run_type :immediate
+    keep_alive true
+    process_type :background
     working_dir Dir.home
     log_path var/"log/hyper_focus.log"
     error_log_path var/"log/hyper_focus_error.log"
-    keep_alive true
-    process_type :background
   end
 
   def install
@@ -23,7 +24,6 @@ class HyperFocus < Formula
   end
 
   test do
-    # TODO need assertion based o help text
-    # assert_match("opbookmarks [OPTIONS] [ACCOUNTS]", shell_output("#{bin}/opbookmarks --help"))
+    assert_match("hyper-focus --help", shell_output("OVERVIEW: A daemon process which helps you focus on your work."))
   end
 end
