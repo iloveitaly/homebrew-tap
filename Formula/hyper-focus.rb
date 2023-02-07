@@ -4,12 +4,13 @@ class HyperFocus < Formula
   url "https://github.com/iloveitaly/hyper-focus/archive/refs/tags/v0.1.6.tar.gz"
   sha256 "543c2ca4413854759b54322fd806b4b7f6a31a1ff4ef9b780ea1c06491611332"
   license "MIT"
-  
+
   depends_on :macos
 
   service do
     # pass configuration in case you run this as root
     run [opt_bin/"hyper-focus", "--configuration", "#{Dir.home}/.config/focus/config.json"]
+    environment_variables PATH: std_service_path_env
     run_type :immediate
     keep_alive true
     process_type :background
