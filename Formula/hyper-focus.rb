@@ -1,8 +1,8 @@
 class HyperFocus < Formula
   desc "Block distracting websites and applications"
   homepage "https://github.com/iloveitaly/hyper-focus"
-  url "https://github.com/iloveitaly/hyper-focus/archive/refs/tags/v0.1.7.tar.gz"
-  sha256 "4744551ac8a964b90de6fd5f4686bb689f5a889e65151598ac210f98a7cdf805"
+  url "https://github.com/iloveitaly/hyper-focus/archive/refs/tags/v0.1.8.tar.gz"
+  sha256 "a57eb49ede407c76c133ad29a28e0618d61d1fe0d5b53e3510105f6ac4f005c7"
   license "MIT"
 
   depends_on :macos
