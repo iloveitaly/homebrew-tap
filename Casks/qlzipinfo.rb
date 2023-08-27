@@ -1,6 +1,6 @@
 cask "qlzipinfo" do
-  version "1.2.1"
-  sha256 "0c09a5a267e280da17d5ccee79dc0355ab5f0dc5892ebe76a79fd77869f25761"
+  version "1.2.4"
+  sha256 "9a5822909fa8d2af1577d580e2e5d6f31d1f90732c27f3a4ea1e7d28f338cb9b"
 
   url "https://github.com/srirangav/qlZipInfo/releases/download/v.#{version}/qlZipInfo-#{version}.dmg"
   name "qlzipinfo"
